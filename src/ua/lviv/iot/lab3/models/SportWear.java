@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab2.models;
+package ua.lviv.iot.lab3.models;
 public class SportWear {
     private String name;
     private int quantity;
@@ -117,5 +117,6 @@ public class SportWear {
                         ", material:" + material +
                         ", percentage of cotton: " + percentageOfCotton +
                         "%, isAdult:" + isAdult ;
+
     }
 }

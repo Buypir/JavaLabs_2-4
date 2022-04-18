@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab2.models;
+package ua.lviv.iot.lab3.models;
 
 public class Outerwear extends SportWear {
     private String sizeInLetters;
@@ -43,5 +43,7 @@ public class Outerwear extends SportWear {
                 "sizeInLetters:" + sizeInLetters +
                 ", isHasHood:" + isHasHood +
                 ", season:" + season ;
+
+
     }
 }

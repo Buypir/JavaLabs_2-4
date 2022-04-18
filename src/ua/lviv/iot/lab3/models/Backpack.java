@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab2.models;
+package ua.lviv.iot.lab3.models;
 
 public class Backpack extends SportWear{
     private int numberOfPockets;
@@ -33,6 +33,7 @@ public class Backpack extends SportWear{
                 "\n" +super.toString() +
                 "numberOfPockets:" + numberOfPockets +
                 ", isHasPowerBank:" + isHasPowerBank ;
+
     }
 }
 

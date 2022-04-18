@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab2.models;
+package ua.lviv.iot.lab3.models;
 public class Sneakers extends SportWear{
     private int sizeInCentimeters;
     private String soleMaterial;

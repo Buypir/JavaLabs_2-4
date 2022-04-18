@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab2.models;
+package ua.lviv.iot.lab3.models;
 
 public class Tracksuit extends Outerwear{
     private String purpose;     //gym clothes, clothes for outdoor sports, walking suits
@@ -33,6 +33,7 @@ public class Tracksuit extends Outerwear{
         return  super.toString() +
                 ", purpose:" + purpose +
                 ", isSameDesign:" + isSameDesign;
+
     }
 }
 
