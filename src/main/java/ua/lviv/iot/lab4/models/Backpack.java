@@ -1,4 +1,11 @@
-package ua.lviv.iot.lab3.models;
+package ua.lviv.iot.lab2.models;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 public class Backpack extends SportWear{
     private int numberOfPockets;
@@ -12,21 +19,6 @@ public class Backpack extends SportWear{
         this.isHasPowerBank = isHasPowerBank;
     }
 
-    public int getNumberOfPockets() {
-        return numberOfPockets;
-    }
-
-    public void setNumberOfPockets(int numberOfPockets) {
-        this.numberOfPockets = numberOfPockets;
-    }
-
-    public boolean isHasPowerBank() {
-        return isHasPowerBank;
-    }
-
-    public void setHasPowerBank(boolean hasPowerBank) {
-        isHasPowerBank = hasPowerBank;
-    }
     @Override
     public String toString() {
         return  "" +

@@ -1,4 +1,10 @@
-package ua.lviv.iot.lab3.models;
+package ua.lviv.iot.lab2.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 public class Outerwear extends SportWear {
     private String sizeInLetters;
@@ -14,29 +20,6 @@ public class Outerwear extends SportWear {
         this.season = season;
     }
 
-    public String getSizeInLetters() {
-        return sizeInLetters;
-    }
-
-    public void setSizeInLetters(String sizeInLetters) {
-        this.sizeInLetters = sizeInLetters;
-    }
-
-    public boolean isHasHood() {
-        return isHasHood;
-    }
-
-    public void setHasHood(boolean hasHood) {
-        isHasHood = hasHood;
-    }
-
-    public String getSeason() {
-        return season;
-    }
-
-    public void setSeason(String season) {
-        this.season = season;
-    }
     @Override
     public String toString() {
         return  "\n" + super.toString() +

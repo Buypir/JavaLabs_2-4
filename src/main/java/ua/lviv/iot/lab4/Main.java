@@ -1,6 +1,6 @@
-package ua.lviv.iot.lab3;
-import ua.lviv.iot.lab3.models.*;
-import ua.lviv.iot.lab3.manager.impl.SportWearManager;
+package ua.lviv.iot.lab2;
+import ua.lviv.iot.lab2.models.*;
+import ua.lviv.iot.lab2.manager.impl.SportWearManager;
 
 import java.util.*;
 public class Main {

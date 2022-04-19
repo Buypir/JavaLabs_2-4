@@ -1,6 +1,6 @@
-package ua.lviv.iot.lab3.manager;
+package ua.lviv.iot.lab2.manager;
 
-import ua.lviv.iot.lab3.models.*;
+import ua.lviv.iot.lab2.models.*;
 import java.util.List;
 
 public interface ISportWearManager {

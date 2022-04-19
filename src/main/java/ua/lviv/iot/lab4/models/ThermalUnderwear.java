@@ -1,4 +1,10 @@
-package ua.lviv.iot.lab3.models;
+package ua.lviv.iot.lab2.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 public class ThermalUnderwear extends SportWear{
     private boolean isTightFitting;
@@ -10,13 +16,6 @@ public class ThermalUnderwear extends SportWear{
         this.isTightFitting = isTightFitting;
     }
 
-    public boolean isTightFitting() {
-        return isTightFitting;
-    }
-
-    public void setTightFitting(boolean tightFitting) {
-        isTightFitting = tightFitting;
-    }
     @Override
     public String toString() {
         return "\n" + super.toString() +

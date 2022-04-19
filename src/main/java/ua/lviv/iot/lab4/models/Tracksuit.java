@@ -1,4 +1,11 @@
-package ua.lviv.iot.lab3.models;
+package ua.lviv.iot.lab2.models;
+
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 public class Tracksuit extends Outerwear{
     private String purpose;     //gym clothes, clothes for outdoor sports, walking suits
@@ -13,21 +20,6 @@ public class Tracksuit extends Outerwear{
         this.isSameDesign = isSameDesign;
     }
 
-    public String getPurpose() {
-        return purpose;
-    }
-
-    public void setPurpose(String purpose) {
-        this.purpose = purpose;
-    }
-
-    public boolean isSameDesign() {
-        return isSameDesign;
-    }
-
-    public void setSameDesign(boolean sameDesign) {
-        isSameDesign = sameDesign;
-    }
     @Override
     public String toString() {
         return  super.toString() +

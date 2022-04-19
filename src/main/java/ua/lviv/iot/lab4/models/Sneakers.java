@@ -1,4 +1,11 @@
-package ua.lviv.iot.lab3.models;
+package ua.lviv.iot.lab2.models;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 public class Sneakers extends SportWear{
     private int sizeInCentimeters;
     private String soleMaterial;
@@ -13,29 +20,6 @@ public class Sneakers extends SportWear{
         this.colorOfLaces = colorOfLaces;
     }
 
-    public int getSizeInCentimeters() {
-        return sizeInCentimeters;
-    }
-
-    public void setSizeInCentimeters(int sizeInCentimeters) {
-        this.sizeInCentimeters = sizeInCentimeters;
-    }
-
-    public String getSoleMaterial() {
-        return soleMaterial;
-    }
-
-    public void setSoleMaterial(String soleMaterial) {
-        this.soleMaterial = soleMaterial;
-    }
-
-    public String getColorOfLaces() {
-        return colorOfLaces;
-    }
-
-    public void setColorOfLaces(String colorOfLaces) {
-        this.colorOfLaces = colorOfLaces;
-    }
     @Override
     public String toString() {
         return "\n" + super.toString() +
