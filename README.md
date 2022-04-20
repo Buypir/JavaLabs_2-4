@@ -1,1 +1,3 @@
-# JavaLabs_2-4
+Task:
+
+Implement the hierarchy of sportswear classes
