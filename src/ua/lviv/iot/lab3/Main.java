@@ -26,7 +26,7 @@ public class Main {
         manager.addWears(sportWear);
         System.out.print(sportWear);
 
-        System.out.println(" Sort dwellings by price: \n 1 - Low-high\n 2 - High-low\n Your choice(1/2): ");
+        System.out.println(" Sort sport Wears by % of cotton: \n 1 - Low-high\n 2 - High-low\n Your choice(1/2): ");
         Scanner scan = new Scanner(System.in);
         int choicePrice = scan.nextInt();
         switch (choicePrice) {
