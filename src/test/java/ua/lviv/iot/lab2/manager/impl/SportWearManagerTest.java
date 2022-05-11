@@ -53,12 +53,12 @@ class SportWearManagerTest {
                 manager.findByPrice(sportWears, 1300).toString());
     }
     @Test
-    void findByNoPriceTest() {
+    void findByWrongPriceTest() {
         assertNull(manager.findByPrice(sportWears, 562));;
     }
 
     @Test
-    void findByNoBrandTest() {
+    void findByWrongBrandTest() {
         assertNull(manager.findByBrand(sportWears, "pi-pi-py-py"));
     }
 
