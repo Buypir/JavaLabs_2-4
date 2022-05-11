@@ -18,6 +18,14 @@ public class Outerwear extends SportWear {
         this.isHasHood = isHasHood;
         this.season = season;
     }
+    @Override
+    public String getHeaders(){
+        return super.getHeaders() + ", sizeInLetters";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + sizeInLetters;
+    }
 
     @Override
     public String toString() {

@@ -19,6 +19,14 @@ public class Sneakers extends SportWear{
         this.soleMaterial = soleMaterial;
         this.colorOfLaces = colorOfLaces;
     }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", sizeInCentimeters";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + sizeInCentimeters;
+    }
 
     @Override
     public String toString() {

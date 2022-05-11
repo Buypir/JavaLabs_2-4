@@ -19,6 +19,15 @@ public class Backpack extends SportWear{
     }
 
     @Override
+    public String getHeaders(){
+        return super.getHeaders() + ", numberOfPockets";
+    }
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + numberOfPockets;
+    }
+
+    @Override
     public String toString() {
         return "\n" +super.toString() +
                 " numberOfPockets:" + numberOfPockets +

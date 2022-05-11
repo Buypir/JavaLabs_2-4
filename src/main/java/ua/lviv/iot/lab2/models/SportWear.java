@@ -5,7 +5,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter()
+@Getter
 @Setter(AccessLevel.NONE)
 public class SportWear {
     private String name;
@@ -32,46 +32,14 @@ public class SportWear {
         this.brand = brand;
         this.percentageOfCotton = percentageOfCotton;
     }
-    public String getName() {
-        return name;
+
+    public String getHeaders() {
+        return "name, quantity, color, priceInUah";
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String toCSV() {
+        return name + ", " + quantity + ", " + color + ", " + priceInUah + " uah ";
     }
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public double getPriceInUah() {
-        return priceInUah;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public boolean isAdult() {
-        return isAdult;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public float getPercentageOfCotton() {
-        return percentageOfCotton;
-    }
-
     @Override
     public String toString() {
         return
