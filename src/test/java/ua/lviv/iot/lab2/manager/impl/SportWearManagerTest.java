@@ -16,14 +16,16 @@ import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SportWearManagerTest {
-    SportWearManager manager = new SportWearManager();
-    List<SportWear> sportWears = createdListOfSportWears();
-    private final Map<String, SportWear> sportWearMap = new HashMap<>();
+public class SportWearManagerTest {
+    SportWearManager manager;
+    List<SportWear> sportWears;
 
     @BeforeEach
     void setUp() throws Exception {
+        manager = new SportWearManager();
+        sportWears = createdListOfSportWears();
         manager.addWears(sportWears);
+        
     }
 
     @AfterEach
@@ -42,7 +44,7 @@ class SportWearManagerTest {
     @Test
     void addWearsTest() {
         Assertions.assertFalse(manager.getAllSportWears().isEmpty());
-        Assertions.assertEquals(6, manager.getAllSportWears().size());
+        Assertions.assertEquals(7, manager.getAllSportWears().size());
     }
 
     @Test
@@ -71,14 +73,14 @@ class SportWearManagerTest {
 
     @Test
     void sortByPercentageOfCottonTest() {
-        float[] expectedAscPrices = {0f, 15.2f, 23.5f, 46.2f, 66.3f, 70f };
+        float[] expectedAscPrices = {0f, 15.2f, 23.5f, 46.2f, 66.3f, 70f, 75.2f };
         manager.sortByPercentageOfCotton(sportWears, SortChoise.ASCENDING);
-        IntStream.range(0, 6).forEachOrdered(n -> {
+        IntStream.range(0, 7).forEachOrdered(n -> {
             assertEquals(expectedAscPrices[n], sportWears.get(n).getPercentageOfCotton());
         });
-        float[] expectedDescPrices = {70f, 66.3f, 46.2f, 23.5f, 15.2f, 0f};
+        float[] expectedDescPrices = {75.2f, 70f, 66.3f, 46.2f, 23.5f, 15.2f, 0f};
         manager.sortByPercentageOfCotton(sportWears, SortChoise.DESCENDING);
-        IntStream.range(0, 6).forEachOrdered(n -> {
+        IntStream.range(0, 7).forEachOrdered(n -> {
             assertEquals(expectedDescPrices[n], sportWears.get(n).getPercentageOfCotton());
         });
     }
@@ -86,7 +88,9 @@ class SportWearManagerTest {
 
     public List<SportWear> createdListOfSportWears() {
         List<SportWear> sportWears = new LinkedList<>();
-        SportWear cap = new SportWear("cap" , 7,"Afghanistan", "Blue", 120,
+        Outerwear tShirt = new Outerwear("T-shirt" , 32,"Ukraine", "Orange", 300,
+                "Male", "cotton", true, "TNF", 75.2f, "M", true, "All season");
+        SportWear cap = new SportWear("Сap" , 7,"Afghanistan", "Blue", 120,
                 "Unisex", "cotton", true, "CoolBoy", 15.2f);
         Backpack sportBag = new Backpack("Backpack" , 4,"Afghanistan", "Gray", 1300,
                 "Unisex", "cotton", true, "Puma", 46.2f, 3,true);
@@ -104,6 +108,7 @@ class SportWearManagerTest {
         sportWears.add(airForce);
         sportWears.add(thermalSuit);
         sportWears.add(tracksuit);
+        sportWears.add(tShirt);
         return sportWears;
     }
 
